@@ -31,9 +31,6 @@ module.exports = function() {
   app.use(methodOverride());
   app.use(session({
     secret: config.session.secret,
-    store: new Session({
-      url: config.mongo.uri
-    }),
     cookie: { maxAge: 14400000 },
     saveUninitialized: true,
     resave: true
