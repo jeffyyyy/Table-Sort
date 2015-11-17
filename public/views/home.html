@@ -1,0 +1,32 @@
+<div class="row">
+<div class="col-sm-offset-2 col-sm-8">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="text-center">Table Sort</h3>
+		</div>
+		<div class="panel-body">
+			<table class="table table-striped table-hover">
+				<thead>
+					<th>Order</th>
+					<th>Name</th>
+					<th>Action</th>
+					<th></th>
+				</thead>
+				<tr ng-repeat="d in content.clone track by $index" ng-class="{'success': content.editIndex == $index}">
+					<td>{{$index+1}}</th>
+					<td>{{d}}</td>
+					<td><button type="button" class="btn btn-info" ng-click="edit(d, $index)">Edit</button></td>
+					<td width="50%">
+						<form class="form-inline" ng-if="content.editIndex == $index">
+							<div class="form-group">
+								<label for="order">Order</label>
+								<input type="number" class="form-control" id="order" ng-model="content.order" re-order>
+							</div>
+						</form>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+</div>

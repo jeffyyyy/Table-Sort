@@ -1,0 +1,75 @@
+{
+  "site": {
+    "name": "Table Sort",
+    "url": "http://localhost:2584"
+  },
+
+  "session": {
+    "secret": "h789ok-gtr43ws3fg-bu89okjn-hgt54edfg"
+  },
+
+  "mongo": {
+    "uri": "mongodb://localhost/qrious"
+  },
+
+  "server": {
+    "port": 2584
+  },
+
+  "tableau": {
+    "local": {
+      "uri": "https://10.100.162.5",
+      "signinUri": "/api/2.0/auth/signin",
+      "listSites": "/api/2.0/sites"
+    }
+  },
+
+  "ldap": {
+    "vocus": {
+      "setup": {
+        "uri": "ldap://175.45.91.184:389",
+        "version": 3,
+        "starttls": false,
+        "connecttimeout": -1,
+        "reconnect": true,
+        "timeout": 15000
+      },
+
+      "bind": {
+        "binddn": "CN=Staff Directory,OU=Service Accounts,OU=Users,OU=Vocus Users and Groups,DC=vocus,DC=local",
+        "password": "ExbMSOEZ8Q"
+      },
+
+      "search": {
+        "base": "OU=Users,OU=Vocus Users and Groups,DC=vocus,DC=local",
+        "scope": "",
+        "filter": "(&(objectCategory=organizationalPerson)(objectClass=User)(!(userAccountControl:1.2.840.113556.1.4.803:=2))(l=*))",
+        "attrs": ""
+      }
+    },
+    "amcom": {
+      "setup": {
+        "uri": "ldap://per-dc01.amcom.com.au",
+        "version": 3,
+        "starttls": false,
+        "connecttimeout": -1,
+        "reconnect": true,
+        "timeout": 15000
+      },
+
+      "bind": {
+        "binddn": "CN=svc VocLDAP,OU=Services,OU=Security,OU=AU,DC=amcom,DC=com,DC=au",
+        "password": "yAPdM8yfYirBdy4B"
+      },
+
+      "search": {
+        "base": "OU=Departments,OU=Users,OU=AU,DC=amcom,DC=com,DC=au",
+        "scope": "",
+        "filter": "(&(objectCategory=organizationalPerson)(objectClass=User)(!(userAccountControl:1.2.840.113556.1.4.803:=2))(l=*))",
+        "attrs": ""
+      }
+    }
+  }
+
+
+}
