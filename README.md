@@ -1,7 +1,7 @@
 # Table-Sort
 
-1. Run command 'npm install' -- install npm packages
+Reorder table list given your input.
 
-2. Run command 'bower install' -- install bower packages
+1. Run command 'npm run init' to install necessary packages
 
-3. Run command 'node server.js' to start the server
+2. Run command 'npm run start' to start the server
